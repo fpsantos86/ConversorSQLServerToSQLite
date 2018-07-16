@@ -1,0 +1,14 @@
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\bin\x86\Debug\Converter.exe.config
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\bin\x86\Debug\Converter.exe
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\bin\x86\Debug\Converter.pdb
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\bin\x86\Debug\DbAccess.dll
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\bin\x86\Debug\log4net.dll
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\bin\x86\Debug\System.Data.SQLite.dll
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\bin\x86\Debug\DbAccess.pdb
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\obj\x86\Debug\Converter.csprojResolveAssemblyReference.cache
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\obj\x86\Debug\Converter.MainForm.resources
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\obj\x86\Debug\Converter.TableSelectionDialog.resources
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\obj\x86\Debug\Converter.ViewFailureDialog.resources
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\obj\x86\Debug\Converter.csproj.GenerateResource.Cache
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\obj\x86\Debug\Converter.exe
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\Converter\obj\x86\Debug\Converter.pdb

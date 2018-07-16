@@ -1,0 +1,88 @@
+DEBUG 2018-07-16 11:23:29,885 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [sysdiagrams]
+DEBUG 2018-07-16 11:23:30,869 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [ESTRUTURAS_ORIGEM]
+DEBUG 2018-07-16 11:23:31,448 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [ITENS_CARGA]
+DEBUG 2018-07-16 11:23:32,036 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [CARGAS]
+DEBUG 2018-07-16 11:23:32,039 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:841) - finished parsing all tables in SQL Server schema
+DEBUG 2018-07-16 11:23:39,700 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:461) - Creating SQLite database...
+DEBUG 2018-07-16 11:23:39,704 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:466) - SQLite file was created successfully at [C:\Users\sharepoint.admindev\Documents\POCs\CSOM\ConsultaCSOM\HandlingSQLite\ConsoleApplication1\bin\Debug\MyDatabase.sqlite]
+DEBUG 2018-07-16 11:23:40,031 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,033 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,033 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(getdate)] AFTER [getdate]
+DEBUG 2018-07-16 11:23:40,033 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:725) - converted SQL Server GETDATE() to CURRENT_TIMESTAMP for column [REGISTRO]
+DEBUG 2018-07-16 11:23:40,034 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(1)] AFTER [1]
+ INFO 2018-07-16 11:23:40,035 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [ESTRUTURAS_ORIGEM] (
+	[ID]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[DESCRICAO]	varchar(150) COLLATE NOCASE,
+	[REGISTRO]	datetime DEFAULT (CURRENT_TIMESTAMP),
+	[STATUS]	bit DEFAULT 1
+
+);
+
+
+
+DEBUG 2018-07-16 11:23:40,143 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [ESTRUTURAS_ORIGEM]
+DEBUG 2018-07-16 11:23:40,144 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,145 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,145 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,146 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(0)] AFTER [0]
+DEBUG 2018-07-16 11:23:40,147 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,147 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(getdate)] AFTER [getdate]
+DEBUG 2018-07-16 11:23:40,148 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:725) - converted SQL Server GETDATE() to CURRENT_TIMESTAMP for column [REGISTRO]
+ INFO 2018-07-16 11:23:40,149 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [ITENS_CARGA] (
+	[ID]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[CARGA_ID]	integer NOT NULL,
+	[ARQUIVO_MANIPULADO]	text(2147483647) COLLATE NOCASE,
+	[CARREGADO]	bit DEFAULT 0,
+	[UPLOAD]	datetime,
+	[REGISTRO]	datetime DEFAULT (CURRENT_TIMESTAMP)
+,
+    FOREIGN KEY ([CARGA_ID])
+        REFERENCES [CARGAS]([ID])
+);
+
+
+
+DEBUG 2018-07-16 11:23:40,357 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [ITENS_CARGA]
+DEBUG 2018-07-16 11:23:40,358 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,359 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,359 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,360 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(1)] AFTER [1]
+DEBUG 2018-07-16 11:23:40,360 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,361 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,361 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,362 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,362 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,458 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,459 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2018-07-16 11:23:40,460 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(getdate)] AFTER [getdate]
+DEBUG 2018-07-16 11:23:40,461 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:725) - converted SQL Server GETDATE() to CURRENT_TIMESTAMP for column [REGISTRO]
+ INFO 2018-07-16 11:23:40,462 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [CARGAS] (
+	[ID]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[INICIO]	datetime,
+	[FIM]	datetime,
+	[ID_ESTRUTURA_ORIGEM]	integer DEFAULT 1,
+	[CAMINHO_ORIGEM]	text(2147483647) COLLATE NOCASE,
+	[CAMINHO_PLANILHA]	text(2147483647) COLLATE NOCASE,
+	[CAMINHO_LOG]	text(2147483647) COLLATE NOCASE,
+	[CAMINHO_DESTINO]	text(2147483647) COLLATE NOCASE,
+	[CAMINHO_MIGRATION]	text(2147483647) COLLATE NOCASE,
+	[TOTAL_CARREGADO]	integer,
+	[HOST_NAME]	varchar(50) COLLATE NOCASE,
+	[REGISTRO]	datetime NOT NULL DEFAULT (CURRENT_TIMESTAMP)
+
+);
+
+
+
+DEBUG 2018-07-16 11:23:40,831 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [CARGAS]
+DEBUG 2018-07-16 11:23:40,877 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:519) - finished adding all table/view schemas for SQLite database
+DEBUG 2018-07-16 11:23:40,886 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:133) - preparing to insert tables ...
+DEBUG 2018-07-16 11:23:41,059 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [ESTRUTURAS_ORIGEM]
+DEBUG 2018-07-16 11:23:52,286 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [ITENS_CARGA]
+DEBUG 2018-07-16 11:23:52,388 (C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [CARGAS]

@@ -1,0 +1,7 @@
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\bin\x86\Debug\DbAccess.dll
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\bin\x86\Debug\DbAccess.pdb
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\bin\x86\Debug\log4net.dll
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\bin\x86\Debug\System.Data.SQLite.dll
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\obj\x86\Debug\DbAccess.csprojResolveAssemblyReference.cache
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\obj\x86\Debug\DbAccess.dll
+C:\Users\sharepoint.admindev\Downloads\SqlConverter_v1_20_source\SqlConverter_v1_20\DbAccess\obj\x86\Debug\DbAccess.pdb
